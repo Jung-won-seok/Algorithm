@@ -19,6 +19,6 @@ public class Beak_1546 {
         for(int k=0;k<N;k++){
             sum += A[k];
         } //B의 합 구하기
-        System.out.println(sum*100/M/N);
+        System.out.println(sum*100.0/M/N);
     }
 }
