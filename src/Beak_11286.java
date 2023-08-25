@@ -1,9 +1,7 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 public class Beak_11286 {
-    private static ArrayList<E> Array;
-
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -30,7 +28,7 @@ public class Beak_11286 {
                         cnt++;
                     }
                 }
-                Array.sort(B);
+                Arrays.sort(B);
                 for(int P=0 ; P<cnt ; P++){
                     for(int Q=0 ; Q<i ; Q++){
                         if(D[C[P]] == -B[Q]){
