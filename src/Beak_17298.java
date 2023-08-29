@@ -25,7 +25,7 @@ public class Beak_17298 {
                     cnt++;
                     j++;
                 }
-                if(cnt == N){
+                if(j == N){
                     System.out.println(-1);
                 }
             }
