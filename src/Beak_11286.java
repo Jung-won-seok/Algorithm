@@ -14,7 +14,7 @@ public class Beak_11286 {
             A[i] = sc.nextInt();
             }
         for(int i=0 ; i<n ; i++){
-            if(A[i] != 0){
+            if(A[ i ] != 0){
                 B[i] = A[i];
             }
             else if(A[i] == 0){
