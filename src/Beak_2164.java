@@ -8,7 +8,7 @@ public class Beak_2164 {
         Scanner sc = new Scanner(System.in);
         Queue<Integer> myQueue = new LinkedList<>();
         int N = sc.nextInt();
-        for(int i=1 ; i<=N ; i++){
+        for(int i=1 ; i <= N ; i++){
             myQueue.add(i);
         }
         while(myQueue.size() > 1){
