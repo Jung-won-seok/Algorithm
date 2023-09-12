@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Beak_1427 {
     public static void main(String[] args){
         int max = 0;
-        int blank = 0;
+        int blank  = 0;
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         String temp = Integer.toString(num);
