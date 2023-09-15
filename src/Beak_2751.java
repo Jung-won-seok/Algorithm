@@ -7,7 +7,7 @@ public class Beak_2751 {
         int N = sc.nextInt();
         int A[] = new int[N];
         for(int i=0 ; i<N ; i++){
-            A[i] = sc.nextInt();
+            A[i]=sc.nextInt();
         }
     }
 }
