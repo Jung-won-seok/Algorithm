@@ -1,26 +1,49 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
-public class practice{
-    public static void main(String[] args){
+public class practice {
+
+    public static int[] src;
+    public static int[] tmp;
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int P[] = new int[N];
-        int A[] = new int[N];
+        src = new int[N];
         for(int i=0 ; i<N ; i++){
-            P[i] = sc.nextInt();
+            src[i] = sc.nextInt();
         }
-        for(int i=0 ; i<N ; i++){
-            int sum = 0;
-            for(int j=0 ; j<=i ; j++){
-                sum = sum + P[j];
+        tmp = new int[src.length];
+        printArray(src);
+        mergeSort(0, src.length-1);
+        printArray(src);
+    }
+
+    public static void mergeSort(int start, int end) {
+        if (start<end) {
+            int mid = (start+end) / 2;
+            mergeSort(start, mid);
+            mergeSort(mid+1, end);
+
+            int p = start;
+            int q = mid + 1;
+            int idx = p;
+
+            while (p<=mid || q<=end) {
+                if (q>end || (p<=mid && src[p]<src[q])) {
+                    tmp[idx++] = src[p++];
+                } else {
+                    tmp[idx++] = src[q++];
+                }
             }
-            A[i] = sum;
+
+            for (int i=start;i<=end;i++) {
+                src[i]=tmp[i];
+            }
         }
-        int result = 0;
-        for(int i=0 ; i<N ; i++){
-            result = result + A[i];
-        }
-        System.out.println(result);
+    }
+
+    public static void printArray(int[] a) {
+        for (int i=0;i<a.length;i++)
+            System.out.print(a[i]+" ");
+        System.out.println();
     }
 }

@@ -17,10 +17,11 @@ public class Beak_2751 {
             src[i] = Integer.parseInt(br.readLine()); //배열src 입력
         }
         tmp = new int[src.length];
-        printArray(src);
-        mergeSort(0, src.length-1);
-        printArray(src);
 
+        mergeSort(0, src.length-1);
+        for(int k=0 ; k<N; k++){
+            bw.write(src[i]);
+        }
         bw.flush();
         bw.close();
     }
