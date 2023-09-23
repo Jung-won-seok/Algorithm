@@ -32,7 +32,7 @@ public class Beak_2751 {
             mergeSort(start, mid);
             mergeSort(mid+1, end);
 
-            int p = start;
+            int p = start ;
             int q = mid + 1;
             int idx = p;
 
