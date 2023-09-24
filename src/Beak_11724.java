@@ -39,7 +39,7 @@ public class Beak_11724 {
         if (visited[v]) {
             return;
         }
-        visited[v] = true;
+        visited[v] = true ;
         for (int i : A[v]) { //현재 노드에서 연결되어 있는 노드를 모두 탐색
             if (!visited[i]) {
                 DFS(i); //방문하지 않은 노드가 있다면 자기자신을 다시 구현
