@@ -36,7 +36,7 @@ public class Beak_11724 {
     }
 
     private static void DFS(int v) {
-        if (visited[v]) {
+        if (visited[v] ) {
             return;
         }
         visited[v] = true ;
