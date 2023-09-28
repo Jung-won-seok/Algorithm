@@ -30,7 +30,7 @@ public class Beak_11286 {
                 }
                 Arrays.sort(B);
                 for(int P=0 ; P<cnt ; P++){
-                    for(int Q=0 ; Q<i ; Q++){
+                    for(int Q=0 ; Q < i ; Q++){
                         if(D[C[P]] == -B[Q]){
                             B[Q] = -B[Q];
                         }
