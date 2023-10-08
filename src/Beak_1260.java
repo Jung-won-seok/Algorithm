@@ -11,7 +11,7 @@ public class Beak_1260 {
             A[i] = sc.nextInt();
         }
         for (int i = 0; i < n; i++) {
-            System.out.println(A[i]);
+            System.out.println( A[i] );
         }
     }
 }
