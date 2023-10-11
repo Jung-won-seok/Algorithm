@@ -13,5 +13,6 @@ public class Beak_1260 {
         for (int i = 0; i < n; i++) {
             System.out.println( A[i] );
         }
+        System.out.println("\n");
     }
 }
