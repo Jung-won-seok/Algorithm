@@ -14,5 +14,6 @@ public class Beak_1260 {
             System.out.println( A[i] );
         }
         System.out.println("\n");
+        System.out.println();
     }
 }
