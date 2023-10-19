@@ -13,7 +13,7 @@ public class Beak_10986 {
         int cnt = 0;
         for(int i=0 ; i<N ; i++){
             int sum = 0;
-            for(int j=i ; j<N ; j++){
+            for(int j=i ; j<N ; j++ ){
                 sum = sum + j;
                 if(sum % M == 0){
                     cnt++;
