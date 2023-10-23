@@ -19,17 +19,14 @@ public class Beak_1920 {
         for (int i = 0; i < M; i++) {
             int start = 0;
             int end = A.length - 1;
-            int mid = (start + end) / 2;
             while (start <= end) {
+                int mid = (start + end) / 2;
                 if (find[i] > A[mid]) {
                     start = mid + 1;
                 } else if (find[i] < A[mid]) {
                     end = mid - 1;
-                } else if (find[i] == A[mid]) {
-                    Answer[i] = 1;
-                    break;
                 } else {
-                    Answer[i] = 0;
+                    Answer[i] = (find [i] == A[mid]) ? 1 : 0;
                     break;
                 }
             }
