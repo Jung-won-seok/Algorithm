@@ -26,7 +26,7 @@ public class Beak_1920 {
                 } else if (find[i] < A[mid]) {
                     end = mid - 1;
                 } else {
-                    Answer[i] = (find [i] == A[mid]) ? 1 : 0;
+                    Answer[i] = (find [i] == A[mid]) ?1 : 0;
                     break;
                 }
             }
