@@ -22,11 +22,11 @@ public class Beak_1744 {
         while(plus_q.size() > 1){
             int first = plus_q.poll();
             int second = plus_q.poll();
-            if(first == 1 && second == 1){
+            if(first == 1 || second == 1){
                 sum = sum + first + second;
             }else {
                 sum = sum + (first * second);
-            }
+            } //sum = sum + Math.Max;
         }
         if(!plus_q.isEmpty()){
             sum = sum + plus_q.poll();
