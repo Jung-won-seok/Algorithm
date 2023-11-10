@@ -18,7 +18,7 @@ public class Beak_1300 {
             }
         }
 
-        Arrays.sort(B); //배열B 정렬
+        Arrays.sort(B); // 배열B 정렬
 
 
         for(int i=0 ; i<N ; i++){
