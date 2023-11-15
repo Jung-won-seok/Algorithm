@@ -4,17 +4,25 @@ public class Beak_2018 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int A[] = new int[N];
-        for(int i=0;i<N;i++){
-            A[i]=i+1;}
-        int cnt=0;
-        for(int j=0;j<N;j++){
-            int sum=j;
-            for(int k=sum+1;k<=N;k++){
-                sum = sum + k;
-                if(sum == N){cnt++;}
+
+        int count = 1;
+        int left = 1;
+        int right = 1;
+        int sum = 1;
+
+        while(right != N){
+            if(sum == N){
+                count++;
+                right++;
+                sum = sum + right;
+            }else if(sum > N){
+                sum = sum - left;
+                left++;
+            }else{
+                right++;
+                sum = sum + right;
             }
         }
-        System.out.println(cnt);
+        System.out.println(count);
     }
 }
