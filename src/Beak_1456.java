@@ -4,29 +4,46 @@ import java.util.Scanner;
 public class Beak_1456 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int A = sc.nextInt(); //2
-        int B = sc.nextInt(); //5
-        int size = B-A+1; //2, 3, 4, 5 (4개)
-        int num[] = new int[size];
+        int M = sc.nextInt();
+        int N = sc.nextInt();
+        int size = N-1;
+        int B[] = new int[size];
+        int first = 2;
         for(int i=0 ; i<size ; i++){
-            num[i] = A++;
+            B[i] = first++;
         }
 
-        for(int j=0 ; j<size ; j++){
-            for(int k=j+1 ; k<size ; k++){
-                if(num[k] % num[j] == 0){
-                    num[k] = 0;
-                }else if(num[j] == 0){
-                    continue;
+        for(int i=0 ; i<B.length ; i++){
+            for(int j=i+1 ; j<B.length ; j++){
+                if(B[i] == 0){
+                    break;
+                }else if(B[j] % B[i] == 0){
+                    B[j] = 0;
                 }
             }
         }
+
+
+        int cnt_1=0;
+        for(int i=0 ; i<=B.length ; i++){
+            if(B[i]!=0 && B[i]>=2){
+                cnt_1++;
+            }
+        }
+        int answer[] = new int[cnt_1];
+        int a=0;
+        for(int i=0 ; i<=N ; i++){
+            if(B[i]!=0){
+                answer[a] = B[i]; //answer[] -> 소수값을 저장한 배열
+                a++;
+            }
+        }
         int cnt = 0;
-        for(int j=0 ; j<num.length ; j++){
-            for(int k=0 ; k<B ; k++){
-                if(Math.pow(num[j],k) <= B) {
+        for(int j=0 ; j<cnt_1 ; j++){
+            for(int k=0 ; k<N ; k++){
+                if(Math.pow(answer[j],k) <= M) { //Math.pow(num[j], k) -> num[j]의 k제곱
                     cnt++;
-                }else if(Math.pow(num[j],k) > B){
+                }else if(Math.pow(answer[j],k) > M){
                     break;
                 }
             }
