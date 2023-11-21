@@ -6,23 +6,28 @@ public class Beak_1929 {
         Scanner sc = new Scanner(System.in);
         int M = sc.nextInt();
         int N = sc.nextInt();
-        int size = N-M+1;
-        int A[] = new int[size];
+        int size = N-1;
+        int B[] = new int[size];
+        int first = 2;
         for(int i=0 ; i<size ; i++){
-            A[i] = M++;
+            B[i] = first++;
         }
 
-        for(int j=0 ; j<size ; j++){
-            for(int k=j+1 ; k<size ; k++){
-                if(A[k] % A[j] == 0){
-                    A[k] = 0;
-                }else if(A[j] == 0){
-                    continue;
+        for(int i=0 ; i<B.length ; i++){
+            for(int j=i+1 ; j<B.length ; j++){
+                if(B[i] == 0){
+                    break;
+                }else if(B[j] % B[i] == 0){
+                    B[j] = 0;
                 }
             }
         }
+
         for(int i=0 ; i<size ; i++){
-            System.out.println(A[i]);
+            if(B[i]!=0 && B[i]>=M){
+                System.out.println(B[i]);
+            }
         }
+
     }
 }
